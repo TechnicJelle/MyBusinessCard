@@ -35,7 +35,7 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
       - name: Compile the card
-        run: ./compile.sh
+        run: chmod +x compile.sh && ./compile.sh
       - name: Prep for upload
         run: |
           mkdir out/
