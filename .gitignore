@@ -1,0 +1,6 @@
+# IDE Files
+.idea/
+
+# Build Outputs
+card.pdf
+card.png
