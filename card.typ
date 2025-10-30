@@ -1,6 +1,6 @@
 #set page(
 	paper: "eu-business-card",
-	margin: 0pt,
+	margin: 0mm,
 )
 
 #set text(
@@ -27,7 +27,7 @@
 // ---------------------------------
 // Logo Image
 // ---------------------------------
-#place(right + top, dy: 8%, image(
+#place(right + top, dx: -1mm, dy: 8%, image(
 	"logo.png",
 	height: 62%,
 ))
@@ -36,11 +36,7 @@
 // ---------------------------------
 // Top: Name & Job Title
 // ---------------------------------
-#place(top + left, dy: 2pt, block(
-	inset: 8pt,
-	spacing: 0pt,
-	width: 100%,
-)[
+#place(top + left, dx: 3mm, dy: 4mm)[
 //Allow overriding my name with the $TYPST_NAME environment variable (see compile.sh)
 #let default_name = "TechnicJelle"
 #let input_name = sys.inputs.at("NAME", default: default_name)
@@ -51,26 +47,22 @@
 }
 
 #set text(fill: white)
-#show heading: set block(below: 0pt, above: 0pt)
+#show heading: set block(below: 0mm, above: 0mm)
 
 = *#name*
-#v(13pt)
+#v(4mm)
 
 == Graphics Programmer
-#v(6pt)
+#v(2mm)
 
 For Games
-])
+]
 
 
 // ---------------------------------
 // Bottom (Links)
 // ---------------------------------
-#place(bottom + left, dy: -10pt, block(
-	inset: 8pt,
-	spacing: 0pt,
-	width: 100%,
-)[
+#place(bottom + left, dx: 2mm, dy: -5mm)[
 
 #show link: name => underline(text(rgb("#3333FF"), name))
 
@@ -82,4 +74,4 @@ For Games
 
 *⠀E-Mail:* #link("mailto:technicjelleplay@gmail.com")[technicjelleplay\@gmail.com]
 
-])
+]
