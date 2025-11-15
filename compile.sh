@@ -4,3 +4,5 @@
 
 typst compile card.typ --font-path ./Fonts/ --ignore-system-fonts --input "NAME=$TYPST_NAME"
 typst compile card.typ --font-path ./Fonts/ --ignore-system-fonts --input "NAME=$TYPST_NAME" --format png --ppi 600
+
+typst compile grid.typ --font-path ./Fonts/ --ignore-system-fonts --input "NAME=$TYPST_NAME"
